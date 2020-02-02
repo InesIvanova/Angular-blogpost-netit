@@ -1,0 +1,8 @@
+.badge {
+    line-height: unset;
+}
+
+.active {
+    color: blue;
+    cursor: pointer;
+}

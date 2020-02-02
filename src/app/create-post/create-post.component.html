@@ -1,0 +1,14 @@
+<form [formGroup]="postForm" (ngSubmit)="createPost()">
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Title</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="title">
+    </div>
+    <div class="alert alert-danger" *ngIf="title.touched && title.errors?.required">
+      this field is requered
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Post content</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="25" formControlName="content"></textarea>
+    </div>
+    <button class="btn btn-dark" type="submit">Create</button>
+  </form>
